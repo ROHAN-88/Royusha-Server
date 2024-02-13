@@ -13,6 +13,11 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
+    imageType: {
+      type: String,
+      required: false,
+      enum: ["Video", "Image"],
+    },
     userId: {
       type: mongoose.ObjectId, //mongoose.Schema.Types.ObjectId
       ref: "User",
